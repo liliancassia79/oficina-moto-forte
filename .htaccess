@@ -1,0 +1,10 @@
+Options -Indexes
+
+# Este sistema foi configurado para uso somente neste computador.
+<IfModule mod_authz_core.c>
+    Require local
+</IfModule>
+
+<FilesMatch "^(config\.local\.php|conexao\.php|auth\.php|banco\.sql)$">
+    Require all denied
+</FilesMatch>
